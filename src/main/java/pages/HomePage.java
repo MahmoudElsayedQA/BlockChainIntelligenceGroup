@@ -40,7 +40,9 @@ public class HomePage {
 
     // Method to take screenshot
     public void takeScreenShot(String screenShotName) throws IOException, InterruptedException {
-        Thread.sleep(3000);
+        //The following wait is to overcome slow internet connection until the page is loaded
+        //we can use wait until element exists, but this will not make the method usable for all pages
+        Thread.sleep(5000);
         //Convert web driver object to TakeScreenshot
         TakesScreenshot screenShot =((TakesScreenshot)driver);
         //Call getScreenshotAs method to create image file
