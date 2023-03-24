@@ -31,7 +31,7 @@ public class HomePage {
 
     // Method to select a product of a specific order from products list
     public ProductPage select_nth_product(int productOrder) {
-        selectNthproduct = By.xpath("//ul[@class='S4WbK_ uQ5Uah c2Zj9x']//li["+productOrder+"]");
+        selectNthproduct = By.xpath("//ul[@data-hook='product-list-wrapper']//li["+productOrder+"]");
         driver.findElement(selectNthproduct).click();
 
         // Organizing structure to identify that this method will navigate to another page
